@@ -15,8 +15,17 @@ class App extends React.Component {
     // destructures answerArray out of state
     const { answerArray } = this.state
     // write your code here!
+    // random number generator associated with an answer
+    const randomNum = Math.floor(Math.random() * 6)
+    // potential answers
+    answerArray.push("Absolutely.") // 0
+    answerArray.push("Perhaps...") // 1
+    answerArray.push("The future is unclear.") // 2
+    answerArray.push("Maybe some day.") // 3
+    answerArray.push("I don't see why not!") // 4
+    answerArray.push("Please ask again. Question is unclear.") // 5
     // Update the return statement below to reflect the outcome of your code.
-    return this.state.question
+    return this.state.answerArray[randomNum]
   }
 
   handleChange = (e) => {
